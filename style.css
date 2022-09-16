@@ -29,6 +29,29 @@ h2{
   margin: 1.5rem;
   color: #ffffff;
   background-color: rgb(249, 147, 75);
+}
 
+/* set up modal */
+#modal{
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  border: 2px solid gray;
+  padding: 2rem;
+  box-shadow: 2px 6px 0 2px #efefef;
+  margin: 3rem;
+}
+#save-movie{
+background-color: green;
+color: #fefefe;
+padding: .3rem;
+margin: .5rem 0 0 0;
+}
+
+#remove-movie{
+background-color: orangered;
+color: #fefefe;
+padding: .3rem;
+margin: .5rem 0 0 0;
 
 }
