@@ -1,0 +1,34 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Roboto', open-sans;
+}
+
+body {
+  margin: 0;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  background: #023d6d;
+  color: white;
+  padding: .5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+}
+h2{
+  margin: 2rem;
+}
+
+#add-movie{
+  display: flex;
+  align-items: center;
+  height: 3rem;
+  margin: 1.5rem;
+  color: #ffffff;
+  background-color: rgb(249, 147, 75);
+
+
+}
