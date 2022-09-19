@@ -2,26 +2,24 @@
 <html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8">
-  <title>Basics</title>
+  <title>Movie Database</title>
   <link rel="stylesheet" href="style.css"></link>
- 
+
   <script src="app.js" charset="utf-8" defer></script>
 
   <!--defer garanie the ORDER offen use ! -->
   <!-- async not garanie the Order!! use only when the script dont interact with the browser stricly use when "send some data" to the back-end !!! :> -->
 </head>  
 <body>
-  <header> <h2>Favorite Movies</h2> <button id="add-movie">Add Movie</button> </header>
+<header> <h2>Favorite Movies</h2> <button id="add-movie">Add Movie</button> </header>
+<section class="modal">
+  <input id="input" type="text" placeholder="enter movie">
+  <img src="" alt="movie theme">
+  <button id="save-movie">save movie</button>
+  <button id="remove-movie">remove movie</button>
 
-
-  <section id="modal">
-    <input type="text" placeholder="enter movie">
-    <img src="" alt="movie theme">
-    <button id="save-movie">save movie</button>
-    <button id="remove-movie">remove movie</button>
-  
-  </section>
-
+</section>
+<hr>
 
 </body>
 </html>
