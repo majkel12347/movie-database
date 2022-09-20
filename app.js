@@ -1,26 +1,17 @@
-const addMovie = document.getElementById('add-movie');
-const modal = document.querySelector('.modal');
+const addMovieModal = document.getElementById('add-modal');
+const startAddMovieBtn = document.getElementById('add-movie');
 
-const saveMovie = document.getElementById('save-movie');
-const movies = [];
+const backDrop = document.getElementById('backdrop');
 
-const inputMovie = document.getElementById('input');
+const toggleBackdrop = () => {
+  backDrop.classList.toggle('visible');
+};
 
-addMovie.addEventListener('click', function (e) {
-  modal.classList.toggle('visible');
-});
+const toggleMovieModal = () => {
+  addMovieModal.classList.toggle('visible');
+  document.body.style.overflowY = 'hidden';
+  toggleBackdrop();
+};
 
-function movieAdd(name) {
-  const movie = { name, id: Date.now(), desc: 'description' };
-  movies.push(movie);
-  console.log(movies);
-}
+startAddMovieBtn.addEventListener('click', toggleMovieModal);
 
-saveMovie.addEventListener('click', function (e) {
-  const text = inputMovie.value.trim();
-  if (text !== '') {
-    movieAdd.push(text);
-    inputMovie.value = '';
-    inputMovie.focus();
-  }
-});
