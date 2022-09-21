@@ -5,19 +5,21 @@ const backDrop = document.getElementById('backdrop');
 
 const cancelBtn = document.getElementById('cancel');
 
-const toggleBackdrop = () => {
+const toggleBackdropHndler = () => {
   backDrop.classList.toggle('visible');
 };
 
 const toggleMovieModal = () => {
   addMovieModal.classList.toggle('visible');
   document.body.style.overflowY = 'hidden';
-  toggleBackdrop();
+  toggleBackdropHndler();
 };
 
+const backDropClickHandler = () => {
+  toggleMovieModal();
+};
 startAddMovieBtn.addEventListener('click', toggleMovieModal);
 
-cancelBtn.addEventListener('click', () => {
-  backDrop.classList.toggle('visible');
-  addMovieModal.classList.toggle('visible');
-});
+cancelBtn.addEventListener('click', toggleMovieModal);
+
+backDrop.addEventListener('click', backDropClickHandler);
