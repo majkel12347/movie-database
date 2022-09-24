@@ -8,6 +8,8 @@ const confirmAddMovieBtn = document.getElementById('save-movie');
 
 const userInputs = addMovieModal.querySelectorAll('input');
 
+const entryMovieList = document.getElementById('entry-text');
+
 const movies = [];
 
 const toggleBackdropHndler = () => {
@@ -24,14 +26,21 @@ const backDropClickHandler = () => {
   toggleMovieModal();
 };
 
+const updateUI = () => {
+  if (movies.length === 0) {
+    entryMovieList.style.display = 'flex';
+  } else {
+    entryMovieList.style.display = 'none';
+  }
+};
+
 const cancelAddMovieHandler = () => {
   toggleMovieModal();
-  clearMovieInputs();
 };
 
 const clearMovieInputs = () => {
   for (const input of userInputs) {
-    input = '';
+    input.value = '';
   }
 };
 
@@ -58,13 +67,14 @@ const addMovieHandler = () => {
     movies.push(movie);
     console.log(movies);
     toggleMovieModal();
-    cancelAddMovieHandler();
+    clearMovieInputs();
+    updateUI();
   }
 };
 
 startAddMovieBtn.addEventListener('click', toggleMovieModal);
 
-cancelBtn.addEventListener('click', toggleMovieModal);
+cancelBtn.addEventListener('click', cancelAddMovieHandler);
 
 backDrop.addEventListener('click', backDropClickHandler);
 
