@@ -26,13 +26,24 @@
   <input id="input" type="text" placeholder="enter image URL">
   <hr>
   <label for="">Your Rating</label>
-  <input id="input" type="text" placeholder="enter rating">
+  <input type="number" 
+         placeholder="enter rating"
+         step="1"
+         min="1"
+         max="5"
+         name="rating"
+         id="rating"
+         >
+         
   <hr>
   <button id="save-movie">Add</button>
   <button id="cancel">Cancel</button>
 
 </section>
 <hr>
+<section id="entry-text" class="card">
+  <p>Your personal movie list</p>
+</section>
       <ul id="movie-list"></ul>
 </body>
 </html>
