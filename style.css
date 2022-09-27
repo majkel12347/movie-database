@@ -63,7 +63,7 @@ h2{
 
 }
 
-/* start text card */
+/* start text card  & movie display*/
 .card{
   display: flex;
   justify-content: center;
@@ -77,7 +77,21 @@ h2{
 .hidden{
   display: none;
 }
-/* end text card */
+
+.movie-element{
+  margin: 1rem 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  border-radius: 10px;
+  display: flex;
+}
+
+.movie-element h2,
+.movie-element p{
+  font-size: 1.25rem;
+  margin: 0;
+}
+
+/* end text card & movie display*/
 
 @keyframes fade-in {
   from {
