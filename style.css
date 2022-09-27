@@ -83,12 +83,19 @@ h2{
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
   border-radius: 10px;
   display: flex;
+  width: 15rem;
 }
 
 .movie-element h2,
 .movie-element p{
   font-size: 1.25rem;
   margin: 0;
+}
+
+.movie-element__image{
+  display: flex;
+  width: 3rem;
+  height: 3rem;
 }
 
 /* end text card & movie display*/
