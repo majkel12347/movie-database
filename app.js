@@ -10,7 +10,24 @@ const userInputs = addMovieModal.querySelectorAll('input');
 
 const entryMovieList = document.getElementById('entry-text');
 
+const listRoot = document.getElementById('movie-list');
+
 const movies = [];
+
+const renderNewMovieElement = (title, imageUrl, rating) => {
+  const newMovieElement = document.createElement('li');
+  newMovieElement.classList = 'movie-element';
+  newMovieElement.innerHTML = `
+    <div class="movie-element__image">
+    <img src='${imageUrl}' alt="${title}">
+    </div>
+    <div class="movie-element__info">
+    <h2>${title}</h2>
+    <p>${rating}/5 stars</p>
+    </div>
+  `;
+  listRoot.appendChild(newMovieElement);
+};
 
 const toggleBackdropHndler = () => {
   backDrop.classList.toggle('visible');
@@ -69,6 +86,7 @@ const addMovieHandler = () => {
     toggleMovieModal();
     clearMovieInputs();
     updateUI();
+    renderNewMovieElement(movie.title, movie.image, movie.rating);
   }
 };
 
