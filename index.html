@@ -14,7 +14,7 @@
 
   <header>
    <h2>Favorite Movies</h2> 
-   <button id="add-movie">Add Movie</button>
+   <button id="add-movie"><span>Add Movie</span></button>
 </header>
 
 <div id="backdrop"></div>
@@ -36,10 +36,24 @@
          >
          
   <hr>
-  <button id="save-movie">Add</button>
-  <button id="cancel">Cancel</button>
-
+    <div class="modal--actions"></div>
+      <button id="save-movie">Add</button>
+      <button id="btn--passive">Cancel</button>
+  </div>
+  
 </section>
+<div class="container-modal-delete" id="delete-modal">
+  <div class="modal card">
+        <h2 class="modal__title">Are You sure ?</h2>
+        <p class="modal__content">
+          Are You sure You want to delete this item ? This action can't be made undone 
+        </p>
+        <div class="modal__actions">
+          <button class="cancel" id="btn--passive">No (Cancel)</button>
+          <button class="del"  id="btn--danger">Yes</button>
+        </div>
+   </div>
+   </div>
 <hr>
 <section id="entry-text" class="card">
   <p>Your personal movie list</p>
